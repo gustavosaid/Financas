@@ -1,0 +1,158 @@
+/* Para garantir que o box-sizing seja consistente */
+* {
+    box-sizing: border-box;
+}
+
+/* Container principal - simula o modal/widget */
+.despesa-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    width: 100%;
+    max-width: 700px; /* AUMENTADO: de 600px para 700px */
+    margin: 2rem auto; /* Centraliza na página */
+    background-color: #f4f7f6; /* Fundo levemente cinza */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden; /* Garante que o header não vaze */
+    border: 1px solid #e0e0e0;
+}
+
+/* Header (barra de título) */
+.despesa-header {
+    background-color: #4A90A0; /* Tom de verde/azul da imagem */
+    color: white;
+    padding: 1.25rem 1.75rem; /* AUMENTADO: de 1rem 1.5rem */
+}
+
+.despesa-header h2 {
+    margin: 0;
+    font-size: 1.5rem; /* AUMENTADO: de 1.25rem */
+}
+
+/* Corpo do formulário */
+.despesa-form {
+    padding: 2rem; /* AUMENTADO: de 1.5rem */
+}
+
+/* Linha do formulário (para layout) */
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    gap: 1.5rem; /* Espaço entre as colunas */
+    margin-bottom: 1rem;
+}
+
+/* Colunas do formulário */
+.form-column {
+    flex: 1; /* Faz as colunas dividirem o espaço */
+    min-width: 200px; /* Largura mínima antes de quebrar */
+}
+
+/* Grupo de formulário (label + input) */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+/* Rótulos (Labels) */
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem; /* AUMENTADO: de 0.5rem */
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem; /* AUMENTADO: de 0.9rem */
+}
+
+/* Estilização geral para inputs, textarea e select */
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem; /* AUMENTADO: de 0.75rem */
+    font-size: 1.1rem; /* AUMENTADO: de 1rem */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    color: #333; /* ADICIONADO: Define a cor do texto digitado */
+}
+
+/* ADICIONADO: Define a cor do placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999; /* Um cinza médio para o placeholder */
+    opacity: 1; /* Garante que fique visível */
+}
+
+/* Foco nos inputs */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4A90A0;
+    box-shadow: 0 0 0 2px rgba(74, 144, 160, 0.2);
+}
+
+/* Estilo específico para o <select> de lista */
+.form-group select[size] {
+    padding: 0.5rem; /* Padding diferente para listas */
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.form-group select[size] option {
+    padding: 0.75rem; /* AUMENTADO: de 0.5rem */
+}
+
+/* Área de observação */
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    min-height: 100px; /* AUMENTADO: de 80px */
+}
+
+/* Seção de botões */
+.form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Botão de Confirmar */
+.btn-confirmar {
+    background-color: #4A90A0;
+    color: white;
+    border: none;
+    padding: 1rem 2rem; /* AUMENTADO: de 0.75rem 1.5rem */
+    border-radius: 25px; /* AUMENTADO: de 20px */
+    font-size: 1.1rem; /* AUMENTADO: de 1rem */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-confirmar:hover {
+    background-color: #3B7A8A;
+}
+
+.btn-confirmar:active {
+    transform: scale(0.98);
+}
+
+/* Botão de Cancelar */
+.btn-cancelar {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 1rem; /* AUMENTADO: de 0.95rem */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-cancelar:hover {
+    color: #333;
+}
